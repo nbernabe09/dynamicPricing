@@ -20,7 +20,7 @@ connection.connect(error => {
   if (error) {
     console.log(error);
   }
-  console.log('connectedsdadsadsa');
+  console.log('connected');
 });
 
 app.get('/api/data', (req, res) => {
