@@ -1,3 +1,4 @@
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const DELETE_ITEM = 'DELETE_ITEM';
-export const FETCH_DATA = 'FETCH_DATA';
+export const REQUEST_PRODUCT_DATA = 'REQUEST_PRODUCT_DATA';
+export const RECEIVE_PRODUCT_DATA = 'RECEIVE_PRODUCT_DATA';

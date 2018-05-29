@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchData } from '../actions';
+import { fetchProductData } from '../actions';
 import ProductCard from './ProductCard';
 import banner from '../img/banner.png'
 
 class Content extends Component {
   componentDidMount() {
-    this.props.fetchData();
+    this.props.fetchProductData();
   }
 
   renderProductCard() {
-    const { data } = this.props.products;
+    const { data, isFetching } = this.props.products;
+    if (!data) {
+      return (
+        <div />
+      );
+    }
+
+    if (isFetching) {
+      return <h1>Loading...</h1>
+    }
+
     return data.map(item => {
       return (
         <ProductCard
@@ -20,13 +30,13 @@ class Content extends Component {
           listPrice={parseFloat(item.listprice)}
           ourPrice={parseFloat(item.prodPrice)}
           img={item.productimg}
-         />
+        />
       )
     });
   }
 
   render() {
-    console.log(this.props.products.data);
+    console.log(this.props.products);
     return (
       <div>
         <h1>Ruckus Wireless Solutions and Information</h1>
@@ -46,4 +56,4 @@ function mapStateToProps({ products }) {
   }
 }
 
-export default connect(mapStateToProps, { fetchData })(Content);
+export default connect(mapStateToProps, { fetchProductData })(Content);

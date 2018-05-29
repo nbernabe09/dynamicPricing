@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 class ProductCard extends Component {
   render() {
     const { img, name, listPrice, ourPrice, sku } = this.props;
-    const productImage = `http://${img}`;
+    const productImage = img.includes('http://') ? img : `http://${img}`;
 
     return (
       <div className="card col-sm-4" style={{ width: '18rem', border: 'none' }}>
