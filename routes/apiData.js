@@ -1,5 +1,5 @@
-const mysql = require('mysql');
 require('dotenv').config();
+const mysql = require('mysql');
 
 module.exports = app => {
   app.get('/api/data', (req, res) => {
