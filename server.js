@@ -2,42 +2,20 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
-const mysql = require('mysql');
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+require('./routes/apiData')(app);
 
-const connection = mysql.createConnection({
-  host: "192.168.2.161",
-  user: "username",
-  password: "password",
-  database: "peplinks"
+app.use((err, req, res, next) => {
+  res.status(422).send({ error: err.message });
 });
 
-connection.connect(error => {
-  if (error) {
-    console.log(error);
-  }
-  console.log('connected');
-});
-
-app.get('/api/data', (req, res) => {
-  connection.query('SELECT * FROM products LIMIT 10', (error, rows, fields) => {
-    if (error) {
-      throw error;
-    } else {
-      res.json(rows);
-    }
+if (['production', 'ci'].includes(process.env.NODE_ENV)) {
+  app.use(express.static('client/build'));
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve('client', 'build', 'index.html'));
   });
-});
-
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+}
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
