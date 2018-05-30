@@ -2,17 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchProductData } from '../actions';
 import ProductCard from './ProductCard';
-import banner from '../img/banner.png'
+import banner from '../img/banner.png';
+import logo from '../img/logo.gif';
 
 class Content extends Component {
   componentDidMount() {
     this.props.fetchProductData();
-    console.log(this.props.cart)
   }
 
   renderProductCard() {
     const { data, isFetching } = this.props.products;
-    //console.log("hello: " + this.props.params);
     if (!data) {
       return (
         <div />
@@ -33,15 +32,17 @@ class Content extends Component {
           listPrice={parseFloat(item.listprice)}
           ourPrice={parseFloat(item.prodPrice)}
           img={item.productimg}
+          discontinued={item.discontinued_note}
         />
       )
     });
   }
 
   render() {
-    //console.log(this.props.products);
+    console.log(this.props.products);
     return (
       <div>
+        <img src={logo} className="vendorLogo"/>
         <h1>Ruckus Wireless Solutions and Information</h1>
         <p>Security and Management for the New Internet</p>
         <img src={banner} className='img-fluid' alt='banner'/>

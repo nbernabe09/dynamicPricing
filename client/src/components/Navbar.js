@@ -12,24 +12,6 @@ const Navbar = () => {
           <li className="nav-item active">
             <Link className="nav-link" to={'/'}>Home</Link>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Products</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Solutions</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Resources</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Quote Request</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">News</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Contact Us</a>
-          </li>
         </ul>
       </div>
     </nav>

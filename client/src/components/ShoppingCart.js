@@ -27,7 +27,6 @@ class ShoppingCart extends Component {
 
 
   render() {
-
     const style = {
       div: {
         height: '300px',
@@ -59,9 +58,8 @@ class ShoppingCart extends Component {
   }
 }
 
-function mapStateToProps({ products, cart }) {
+function mapStateToProps({ cart }) {
   return {
-    products,
     cart
   }
 }

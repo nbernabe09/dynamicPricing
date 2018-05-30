@@ -3,8 +3,6 @@ import * as actions from '../actions';
 import { connect } from 'react-redux';
 import './style.css';
 
-import { Link } from 'react-router-dom';
-
 const imgDisplay = {
     'display': 'block',
     'margin': 'auto',
@@ -13,17 +11,16 @@ const imgDisplay = {
 
 class ProductPage extends Component {
   render() {
-    console.log(this.props)
-    const { id, img, name, listPrice, ourPrice, sku } = this.props;
+    const { img, name, listPrice, ourPrice, sku } = this.props;
     const productImage = img.includes('http://') ? img : `http://${img}`;
 
     return (
-      <div class="container-fluid">
+      <div className="container-fluid">
         <h1>{name}<br/></h1>
         <img className="card-img-top img-fluid" src={productImage} alt={name} style={imgDisplay}/>
         <div className="pricing panel panel-primary">
-          <div class="panel-heading">Peplink Series</div>
-          <div class="panel-body">
+          <div className="panel-heading">Peplink Series</div>
+          <div className="panel-body">
             <div className="row">
               <div className="col-sm-7"><strong>{name}</strong></div>
               <div className="col-sm-3">#{sku}<br/>
@@ -38,7 +35,7 @@ class ProductPage extends Component {
 
     <h2>Overview:</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <div class="container-fluid">
+      <div className="container-fluid">
         <h3>Heading 1</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <h3>Heading 2</h3>

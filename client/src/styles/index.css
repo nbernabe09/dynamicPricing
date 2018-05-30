@@ -7,3 +7,27 @@ body {
 #root {
   background-color: #cccccc !important;
 }
+
+.card-title {
+  font-size: 18px;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.panel-heading{
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+.panel-body {
+  font-size: 14px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}

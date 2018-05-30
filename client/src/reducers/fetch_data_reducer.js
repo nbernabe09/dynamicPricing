@@ -1,4 +1,4 @@
-import { REQUEST_PRODUCT_DATA, RECEIVE_PRODUCT_DATA} from '../actions/types';
+import { REQUEST_PRODUCT_DATA, RECEIVE_PRODUCT_DATA } from '../actions/types';
 
 const initialState = {
   isFetching: false,

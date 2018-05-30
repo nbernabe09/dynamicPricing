@@ -18,7 +18,7 @@ connection.connect(error => {
 module.exports = app => {
   app.get('/api/data', (req, res) => {
 
-    connection.query('SELECT * FROM products LIMIT 12', (error, rows, fields) => {
+    connection.query('SELECT * FROM products WHERE `discontinued_note` = "FALSE" LIMIT 12;', (error, rows, fields) => {
       if (error) {
         throw error;
       } else {

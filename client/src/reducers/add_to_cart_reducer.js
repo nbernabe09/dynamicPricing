@@ -1,6 +1,12 @@
 import { ADD_TO_CART, DELETE_ITEM } from '../actions/types';
 
-function AddToCardReducer(state = [], action) {
+const INITIAL_STATE = {
+  name: '',
+  sku: '',
+  price: ''
+}
+
+function addToCardReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case ADD_TO_CART:
       return [
@@ -14,8 +20,8 @@ function AddToCardReducer(state = [], action) {
     case DELETE_ITEM:
       return state.filter(item => item.sku !== action.sku);
     default:
-      return action;
+      return state;
   }
 }
 
-export default AddToCardReducer;
+export default addToCardReducer;

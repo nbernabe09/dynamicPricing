@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ProductPage from './ProductPage';
-import banner from '../img/banner.png'
 
 class Content extends Component {
   componentDidMount() {
     document.getElementById('HEADER').scrollIntoView();
   }
-  
+
   render() {
     const prod = this.props.location.state;
     console.log(this.props.cart);
@@ -36,4 +35,4 @@ function mapStateToProps({ products, cart }) {
   }
 }
 
-export default connect(mapStateToProps)(Content);
+export default connect(mapStateToProps, null)(Content);
