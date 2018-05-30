@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from '../img/ruckus-logo.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <div className='row'>
-      <img src={logo} className='img-fluid' alt='header'/>
+      <Link to={`/`}><img id="HEADER" src={logo} className='img-fluid' alt='header'/></Link>
     </div>
   );
 }

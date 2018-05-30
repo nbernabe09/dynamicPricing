@@ -25,12 +25,15 @@ class ShoppingCart extends Component {
     }
   }
 
+
   render() {
+
     const style = {
       div: {
         height: '300px',
-        position: 'sticky',
-        top: '20px'
+        position: 'fixed',
+        top: '20px',
+        right: '50px'
       },
       cart: {
         backgroundColor: '#343a40',
@@ -46,7 +49,7 @@ class ShoppingCart extends Component {
     return (
       <div style={style.div}>
         <div className='container' style={style.cart}>
-          <h4 className='text-center'>My Cart</h4>
+          <h4 className='text-center' style={{color: 'white'}}>My Cart</h4>
           <hr style={{ backgroundColor: '#fff' }}/>
           {this.renderPrice()}
         </div>
