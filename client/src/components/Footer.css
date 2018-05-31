@@ -27,6 +27,7 @@
 }
 
 .footer p {
+  z-index: 100;
   border-top: 1px solid #000;
   padding: 10px 0;
 }

@@ -45,9 +45,10 @@ class ShoppingCart extends Component {
         overflowY: 'scroll',
       },
       tab: {
+        borderTop: '1px solid #fff',
         backgroundColor: '#343a40',
         color: '#fff',
-        height: '30px',
+        height: '34px',
         width: '233px',
         float: 'right',
         marginRight: '17px',

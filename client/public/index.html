@@ -46,8 +46,10 @@
         $(document).on("click", ".cart-tab", function() {
           if (cartHidden === false) {
             $(this).parent(".cart-container").css("top", "-300px");
+            $(this).children(".tab-words").text("show");
           } else  if (cartHidden === true) {
             $(this).parent(".cart-container").css("top", "0px");
+            $(this).children(".tab-words").text("hide");
           }
           cartHidden = !cartHidden;
         });
