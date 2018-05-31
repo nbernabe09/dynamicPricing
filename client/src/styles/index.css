@@ -5,7 +5,8 @@ body {
 }
 
 #root {
-  background-color: #cccccc !important;
+  /*background-color: #ccc !important;*/
+  background-color: #fff !important;
 }
 
 .card-title {

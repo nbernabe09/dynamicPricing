@@ -6,16 +6,21 @@
   width:100%;
 }
 
-/*.bottom-footer {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background-color: #aaa;
-  padding: 10px 125px 0 350px;
-}*/
+.main-container {
+  width: 75%;
+  margin: auto;
+}
+
+.bottom-footer {
+  border-top: 1px solid #aaa;
+  background-color: #eee;
+  padding-bottom: 50px;
+}
+
+.bottom-footer .row {
+  width: 80%;
+  margin: auto;
+}
 
 .phone-header {
   text-align: left;

@@ -3,7 +3,6 @@ import "./Footer.css";
 
 const Footer = () =>
   <div className="container-fluid bottom-footer">
-    <hr/>
     <div className="row">
       <div className="col-sm-2">
         <h3 className="footer-widget-title">Site Map:</h3>
@@ -25,8 +24,8 @@ const Footer = () =>
           <li><a href="/"><strong>View all Products</strong></a></li>
         </ul>
       </div>
-      <div className="col-sm-2">
-        <h3 className="footer-widget-title">Site Map:</h3>
+      <div className="col-sm-3">
+        <h3 className="footer-widget-title">Resources:</h3>
         <ul className="list-unstyled">
           <li><a href="/">Shipping</a></li>
           <li><a href="/">Returns</a></li>
@@ -37,7 +36,7 @@ const Footer = () =>
         <p className="phone-header"> Call a Specialist Today!<br/>
         <a href="tel:8442940779">844-294-0779</a></p>
       </div>
-      <div className="col-sm-3">
+      <div className="col-sm-2">
         <h3 className="footer-widget-title">Contact:</h3>
         <p>9979 Muirlands Blvd.<br/>
         Irvine, CA 92618</p>

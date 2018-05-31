@@ -23,7 +23,7 @@ const topFooter = () =>
         <li><a href="/"><strong>View all Products</strong></a></li>
       </ul>
     </div>
-    <div className="col-md-2">
+    <div className="col-md-3">
       <h3 className="footer-widget-title">Resources:</h3>
       <ul className="list-unstyled">
         <li><a href="/">Shipping</a></li>
@@ -36,7 +36,7 @@ const topFooter = () =>
         <a className="tel" href="tel:844-294-0779">844-294-0779</a>
       </p>
     </div>
-    <div className="col-md-3">
+    <div className="col-md-2">
       <h3 className="footer-widget-title">Contact:</h3>
       9979 Muirlands Blvd.<br/>
       Irvine, CA 92618<br/>
