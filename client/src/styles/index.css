@@ -25,9 +25,41 @@ p {
 }
 
 .panel-body {
+  border: 1px solid #ccc;
   font-size: 14px;
 }
 
 .navbar {
   margin-bottom: 20px;
+}
+
+.smallHeaderText {
+  margin-bottom: 5px;
+}
+
+.info-card {
+  padding-bottom: 0;
+}
+
+.cart-card {
+  padding-top: 0;
+}
+
+.main-card-img {
+  height: 250px;
+  max-width: 350px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-card-img img {
+  max-height: 250px;
+  max-width: 100%;
+}
+
+.main-card-container {
+  display: flex;
+  justify-content: center;
 }

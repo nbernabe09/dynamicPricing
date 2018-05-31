@@ -43,8 +43,8 @@ class Content extends Component {
     return (
       <div>
         <img src={logo} className="vendorLogo"/>
-        <h1>Ruckus Wireless Solutions and Information</h1>
-        <p>Security and Management for the New Internet</p>
+        <h1>Peplink Products and Solutions</h1>
+        <p className="smallHeaderText">Dual-WAN, Multi-WAN Internet Link Load Balancing Routers</p>
         <img src={banner} className='img-fluid' alt='banner'/>
         <div className='row' style={{ marginTop: '20px' }}>
           {this.renderProductCard()}

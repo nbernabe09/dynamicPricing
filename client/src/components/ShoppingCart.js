@@ -31,28 +31,36 @@ class ShoppingCart extends Component {
       div: {
         height: '300px',
         position: 'fixed',
-        top: '20px',
-        right: '50px'
+        top: '0px',
+        right: '0px'
       },
       cart: {
         backgroundColor: '#343a40',
         color: '#fff',
-        marginTop: '20px',
+        marginTop: '0px',
         padding: '5px',
         width: '250px',
         height: '300px',
         overflowX: 'hidden',
         overflowY: 'scroll',
+      },
+      tab: {
+        backgroundColor: '#343a40',
+        color: '#fff',
+        height: '30px',
+        width: '233px',
+        float: 'right',
+        marginRight: '17px',
       }
     }
     return (
-      <div style={style.div}>
+      <div className='cart-container' style={style.div}>
         <div className='container' style={style.cart}>
           <h4 className='text-center' style={{color: 'white'}}>My Cart</h4>
           <hr style={{ backgroundColor: '#fff' }}/>
           {this.renderPrice()}
         </div>
-        {this.calculateTotal()}
+        <div className="cart-tab" style={style.tab}>{this.calculateTotal()}</div>
       </div>
     );
   }

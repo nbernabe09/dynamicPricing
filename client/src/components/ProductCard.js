@@ -11,14 +11,18 @@ class ProductCard extends Component {
 
     return (
       <div className="card col-sm-4" style={{ width: '18rem', border: 'none' }}>
-        {discontinued === 'TRUE' ? (
-          <img className="card-img-top img-fluid" src={productImage} alt={name}/>
-        ) : (
-          <Link to={{ pathname: `/stuff/${id}`, state: { id, img, name, listPrice, ourPrice, sku } }}>
-          <img className="card-img-top img-fluid" src={productImage} alt={name}/>
-        </Link>
-        )}
-        <div className="card-body">
+        <div className="main-card-container">
+          <div className="main-card-img">
+            {discontinued === 'TRUE' ? (
+              <img className="card-img-top img-fluid" src={productImage} alt={name}/>
+            ) : (
+              <Link to={{ pathname: `/stuff/${id}`, state: { id, img, name, listPrice, ourPrice, sku } }}>
+              <img className="card-img-top img-fluid" src={productImage} alt={name}/>
+            </Link>
+            )}
+          </div>
+        </div>
+        <div className="card-body info-card">
           <h5 className="card-title">{name}</h5>
           <p className="card-text">SKU#: {sku}</p>
           {discontinued === 'TRUE' ? (
@@ -33,7 +37,7 @@ class ProductCard extends Component {
             </Fragment>
           )}
         </div>
-        <div className='card-body'>
+        <div className='card-body cart-card'>
           <button style={discontinued === 'TRUE' ? {display: 'none'} : {marginTop: '10px'}} className='btn btn-outline-info' onClick={() => this.props.addToCart(name, sku, ourPrice)}>ADD TO CART</button>
         </div>
       </div>
