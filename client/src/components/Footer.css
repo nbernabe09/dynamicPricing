@@ -14,7 +14,7 @@
 .bottom-footer {
   border-top: 1px solid #aaa;
   background-color: #eee;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .bottom-footer .row {
@@ -27,5 +27,6 @@
 }
 
 .footer p {
+  border-top: 1px solid #000;
   padding: 10px 0;
 }
