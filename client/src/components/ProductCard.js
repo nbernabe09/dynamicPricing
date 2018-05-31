@@ -10,7 +10,7 @@ class ProductCard extends Component {
     console.log(discontinued);
 
     return (
-      <div className="card col-sm-4" style={{ width: '18rem', border: 'none' }}>
+      <div className="card col-sm-3" style={{ width: '18rem', border: 'none' }}>
         <div className="main-card-container">
           <div className="main-card-img">
             {discontinued === 'TRUE' ? (

@@ -46,8 +46,8 @@ p {
 }
 
 .main-card-img {
-  height: 250px;
-  max-width: 350px;
+  height: 150px;
+  max-width: 200px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@ p {
 }
 
 .main-card-img img {
-  max-height: 250px;
+  max-height: 150px;
   max-width: 100%;
 }
 

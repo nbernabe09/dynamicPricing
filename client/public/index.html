@@ -44,12 +44,12 @@
         var cartHidden = false;
 
         $(document).on("click", ".cart-tab", function() {
-          cartHidden = !cartHidden;
           if (cartHidden === false) {
             $(this).parent(".cart-container").css("top", "-300px");
           } else  if (cartHidden === true) {
             $(this).parent(".cart-container").css("top", "0px");
           }
+          cartHidden = !cartHidden;
         });
       });
       </script>
